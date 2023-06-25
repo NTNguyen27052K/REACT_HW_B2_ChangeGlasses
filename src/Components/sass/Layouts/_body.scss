@@ -1,0 +1,78 @@
+.main {
+  display: flex;
+  .main__left {
+    &:hover .content {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    background-image: url(../../../public/glassesImage/model.jpg);
+    height: 600px;
+    width: 40%;
+    margin-right: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    .imgGlasses {
+      width: 292px;
+      position: absolute;
+      top: 138px;
+      right: 105px;
+      opacity: 0.8;
+    }
+    .content {
+      width: 95%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translateY(70px);
+      opacity: 0;
+      transition: all 0.5s;
+      overflow: hidden;
+    }
+  }
+  .main__right {
+    width: 60%;
+    .main__right--glasses {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 10px;
+    }
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 190px;
+      height: 195px;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      img {
+        width: 90%;
+      }
+    }
+    button {
+      margin-top: 20px;
+      width: 200px;
+      &:hover {
+        background-position: right center;
+      }
+      padding: 20px 35px;
+      font-size: 15px;
+      font-weight: 500;
+      background-image: linear-gradient(
+        to right,
+        #f55f8d 0,
+        #f8ae56 51%,
+        #f55f8d 100%
+      );
+      text-transform: uppercase;
+      background-size: 200%;
+      border: 1px solid transparent;
+      transition: all 0.5s;
+      border-radius: 30px;
+      color: #fff;
+      cursor: pointer;
+      outline: none;
+      line-height: 1.2;
+    }
+  }
+}
